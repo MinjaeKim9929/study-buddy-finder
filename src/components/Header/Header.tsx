@@ -7,3 +7,5 @@ function Header({ isLoggedIn }: { isLoggedIn: boolean }) {
 		return <header>Not Logged In</header>;
 	}
 }
+
+export default Header;
