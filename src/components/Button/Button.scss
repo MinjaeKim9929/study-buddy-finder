@@ -1,16 +1,30 @@
 .btn {
+	font-family: 'Pretendard';
+	font-weight: bold;
 }
 
 .navbar-primary-btn {
 	background-color: #f7edf0;
-	width: 140px;
-	height: 60px;
+	width: 120px;
+	height: 50px;
 	border: 0;
 	border-radius: 100px;
+	font-size: 16px;
+}
+
+.navbar-primary-btn:hover {
+	background-color: #ffe0d6;
 }
 
 .navbar-secondary-btn {
 	background-color: #ffa185;
-	height: 60px;
+	width: 120px;
+	height: 50px;
 	border: 0;
+	border-radius: 100px;
+	font-size: 16px;
+}
+
+.navbar-secondary-btn:hover {
+	background-color: #ffe0d6;
 }
