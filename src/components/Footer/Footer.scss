@@ -11,13 +11,12 @@ footer {
 		margin-bottom: 1rem;
 
 		.footer-left {
-			font-size: 24px;
+			text-align: left;
 			font-weight: bold;
 			font-size: 1.5rem;
 		}
 
 		.footer-right {
-			font-size: 14px;
 			display: flex;
 			flex-direction: column;
 			gap: 12px;
@@ -54,7 +53,7 @@ footer {
 		.footer-policies {
 			display: flex;
 			align-items: center;
-			gap: 0.4rem;
+			gap: 10px;
 
 			a {
 				text-decoration: underline;
@@ -69,6 +68,129 @@ footer {
 			.dot {
 				font-size: 1rem;
 				line-height: 1;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1080px) {
+		padding: 1.5rem 100px;
+
+		.footer-top {
+			.footer-left {
+				font-size: 1.25rem;
+			}
+
+			.footer-right {
+				gap: 10px;
+
+				.footer-link {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.footer-bottom {
+			.copyright {
+				font-size: 12px;
+			}
+
+			.footer-policies {
+				gap: 8px;
+
+				a {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 1rem 20px;
+
+		.footer-top {
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+
+			.footer-left {
+				width: 100%;
+				text-align: center;
+				font-size: 1.25rem;
+			}
+
+			.footer-right {
+				width: 100%;
+				align-items: center;
+				gap: 10px;
+
+				.footer-link {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.footer-divider {
+			margin: 0.5rem 0;
+		}
+
+		.footer-bottom {
+			flex-direction: column;
+			gap: 10px;
+			text-align: center;
+
+			.copyright {
+				font-size: 12px;
+				width: 100%;
+			}
+
+			.footer-policies {
+				width: 100%;
+				justify-content: center;
+				gap: 8px;
+
+				a {
+					font-size: 12px;
+				}
+
+				.dot {
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		padding: 1rem 15px;
+
+		.footer-top {
+			.footer-left {
+				font-size: 1.125rem;
+			}
+
+			.footer-right {
+				gap: 8px;
+
+				.footer-link {
+					font-size: 12px;
+				}
+			}
+		}
+
+		.footer-bottom {
+			.copyright {
+				font-size: 10px;
+			}
+
+			.footer-policies {
+				gap: 6px;
+
+				a {
+					font-size: 10px;
+				}
+
+				.dot {
+					font-size: 0.8rem;
+				}
 			}
 		}
 	}
