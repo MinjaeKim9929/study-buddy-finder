@@ -9,7 +9,7 @@ function Header({ isLoggedIn }: { isLoggedIn: boolean }) {
 			<nav className="navbar">
 				<div className="navbar-left">
 					<a href="/" className="logo">
-						SBF
+						Study Buddy Finder
 					</a>
 				</div>
 				<div className="navbar-right">
