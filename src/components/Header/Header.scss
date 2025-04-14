@@ -5,9 +5,17 @@
 	background-color: #ffa185;
 	height: 70px;
 	padding: 0 300px;
+	transition: all 0.3s ease;
 
 	.navbar-left {
 		text-align: left;
+
+		.logo {
+			font-size: 24px;
+			font-weight: bold;
+			text-decoration: none;
+			color: #000;
+		}
 	}
 
 	.navbar-right {
@@ -15,5 +23,80 @@
 		display: flex;
 		gap: 20px;
 		align-items: center;
+	}
+
+	// Tablet screens (max-width: 1024px)
+	@media screen and (max-width: 1024px) {
+		padding: 0 100px;
+		height: 60px;
+
+		.navbar-right {
+			gap: 15px;
+
+			.navbar-primary-btn,
+			.navbar-secondary-btn {
+				width: 100px;
+				height: 40px;
+				font-size: 14px;
+				border-radius: 50px;
+			}
+		}
+	}
+
+	// Mobile screens (max-width: 768px)
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		padding: 10px 20px;
+		height: auto;
+		gap: 10px;
+
+		.navbar-left {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			.logo {
+				font-size: 20px;
+			}
+		}
+
+		.navbar-right {
+			width: 100%;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+
+			.navbar-primary-btn,
+			.navbar-secondary-btn {
+				width: 100%;
+				max-width: 180px;
+				height: 45px;
+				font-size: 14px;
+				border-radius: 50px;
+			}
+		}
+	}
+
+	// Small mobile screens (max-width: 480px)
+	@media screen and (max-width: 480px) {
+		padding: 10px 15px;
+
+		.navbar-left {
+			.logo {
+				font-size: 18px;
+			}
+		}
+
+		.navbar-right {
+			gap: 8px;
+
+			.navbar-primary-btn,
+			.navbar-secondary-btn {
+				max-width: 140px;
+				height: 40px;
+				font-size: 12px;
+				border-radius: 50px;
+			}
+		}
 	}
 }
