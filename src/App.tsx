@@ -10,6 +10,7 @@ import ProfilePage from './pages/Profile/Profile';
 import CreateGroupPage from './pages/CreateGroup/CreateGroupPage';
 import GroupDetailsPage from './pages/GroupDetails/GroupDetailsPage';
 import NotFoundPage from './pages/NotFound/NotFoundPage';
+import Footer from './components/Footer/Footer';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -29,6 +30,7 @@ function App() {
 					<Route path="*" element={<NotFoundPage />} />
 				</Routes>
 			</div>
+			<Footer />
 		</div>
 	);
 }
