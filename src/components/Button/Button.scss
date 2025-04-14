@@ -1,0 +1,58 @@
+.btn {
+	font-family: 'Pretendard';
+	font-weight: bold;
+	border: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+// Primary button for navbar
+.navbar-primary-btn {
+	background-color: #f7edf0;
+	min-width: 100px;
+	padding: 12px 24px;
+	border-radius: 50px;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: center;
+
+	&:hover {
+		background-color: #ffe0d6;
+	}
+}
+
+// Secondary button for navbar
+.navbar-secondary-btn {
+	background-color: #ffa185;
+	min-width: 100px;
+	padding: 12px 24px;
+	border-radius: 50px;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: center;
+
+	&:hover {
+		background-color: #ffe0d6;
+	}
+}
+
+// Responsive adjustments
+@media screen and (max-width: 768px) {
+	.navbar-primary-btn,
+	.navbar-secondary-btn {
+		min-width: 80px;
+		padding: 10px 20px;
+		font-size: 0.875rem;
+		border-radius: 40px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.navbar-primary-btn,
+	.navbar-secondary-btn {
+		min-width: 70px;
+		padding: 8px 16px;
+		font-size: 0.75rem;
+		border-radius: 30px;
+	}
+}
