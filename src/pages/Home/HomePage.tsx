@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from '../../components/HeroSection/HeroSection';
+import './HomePage.scss';
 
 function HomePage() {
 	return (

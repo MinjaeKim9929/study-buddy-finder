@@ -18,14 +18,15 @@ function HeroSection() {
 							Get Started
 						</Button>
 					</Link>
+					<p className="hero-signin">
+						Already have an account?
+						<Link to="/sign-in" aria-label="Sign in to your Study Buddy Finder account">
+							Sign in
+						</Link>
+					</p>
 				</div>
 			</div>
-			<p className="hero-signin">
-				Already have an account?
-				<Link to="/sign-in" aria-label="Sign in to your Study Buddy Finder account">
-					Sign in
-				</Link>
-			</p>
+
 			<div className="hero-image">
 				<img src="/images/hero-image.png" alt="A student holding a pen" />
 			</div>
