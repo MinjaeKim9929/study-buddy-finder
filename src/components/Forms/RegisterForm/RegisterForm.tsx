@@ -81,8 +81,12 @@ function RegisterForm({ onSubmit }: RegisterFormProps) {
 				</p>
 			</div>
 			<div className="registerForm-inputs">
-				{errorMsg && <div className="error-message">{errorMsg}</div>}
 				<form onSubmit={handleRegistrationSubmit}>
+					{errorMsg && (
+						<div className="registerForm-error" role="alert">
+							<p>{errorMsg}</p>
+						</div>
+					)}
 					<label htmlFor="email">
 						<input
 							type="email"

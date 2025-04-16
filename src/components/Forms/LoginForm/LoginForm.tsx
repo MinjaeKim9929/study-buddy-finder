@@ -5,9 +5,10 @@ import Button from '../../Button/Button';
 
 interface LoginFormProps {
 	onSubmit: (email: string, password: string) => void;
+	error?: string;
 }
 
-function LoginForm({ onSubmit }: LoginFormProps) {
+function LoginForm({ onSubmit, error }: LoginFormProps) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -31,6 +32,11 @@ function LoginForm({ onSubmit }: LoginFormProps) {
 			</div>
 			<div className="loginForm-inputs">
 				<form onSubmit={handleSubmit}>
+					{error && (
+						<div className="loginForm-error" role="alert">
+							<p>{error}</p>
+						</div>
+					)}
 					<label htmlFor="email">
 						<input
 							type="email"
