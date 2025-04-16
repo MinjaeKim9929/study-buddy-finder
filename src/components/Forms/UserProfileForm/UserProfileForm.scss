@@ -1,0 +1,489 @@
+.userProfileForm {
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+	padding: 2rem;
+	max-width: 800px;
+	margin: 10rem auto;
+
+	.userProfileForm-content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 0 1rem;
+		font-family: 'Pretendard';
+		margin-bottom: 3rem;
+
+		.userProfileForm-title {
+			font-size: 3rem;
+			font-weight: 700;
+			color: #000103;
+			margin-bottom: 1.2rem;
+		}
+
+		.userProfileForm-subtitle {
+			font-size: 0.9rem;
+			color: #000103;
+			line-height: 1.5;
+			font-weight: 600;
+			margin: 0;
+		}
+	}
+
+	.userProfileForm-inputs {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
+		max-width: 100%;
+		margin-left: 2rem;
+		margin-right: 2rem;
+		margin-bottom: 5r;
+
+		form {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
+			.userProfileForm-field {
+				display: flex;
+				align-items: center;
+				gap: 5rem;
+
+				label {
+					font-size: 1rem;
+					color: #000103;
+					font-weight: 600;
+					width: 120px;
+					text-align: left;
+
+					&.required::after {
+						content: '*';
+						color: #ff4d4d;
+						margin-left: 0.25rem;
+					}
+				}
+
+				.courses-label,
+				.availability-label {
+					font-size: 1rem;
+					color: #000103;
+					font-weight: 600;
+					width: 120px;
+					text-align: left;
+				}
+
+				.userProfileForm-input {
+					flex: 1;
+					padding: 0.8rem 1rem;
+					font-size: 1rem;
+					border: 2px solid #ddd;
+					border-radius: 10px;
+					background-color: #f5f7fa;
+					outline: none;
+					transition: border-color 0.3s ease;
+					font-family: 'Pretendard';
+					width: 100%;
+
+					&:focus {
+						border-color: #ffa185;
+					}
+
+					&::placeholder {
+						color: #999;
+						font-weight: 550;
+					}
+				}
+
+				&.gender {
+					select.userProfileForm-input {
+						appearance: none;
+						background-repeat: no-repeat;
+						background-position: right 1rem center;
+						background-size: 10px;
+						padding-right: 2rem;
+					}
+				}
+
+				&.courses-taking,
+				&.courses-taken {
+					display: flex;
+					align-items: flex-start;
+					gap: 5rem;
+
+					.courses-input-container {
+						flex: 1;
+						display: flex;
+						flex-direction: column;
+						gap: 0.5rem;
+
+						.course-input-wrapper {
+							display: flex;
+							align-items: center;
+							gap: 0.5rem;
+
+							.course-input {
+								flex: 1;
+							}
+
+							.remove-course-btn {
+								background: none;
+								border: none;
+								color: #ff4d4d;
+								font-size: 1rem;
+								cursor: pointer;
+								padding: 0.5rem;
+								line-height: 1;
+							}
+						}
+
+						.add-course-btn {
+							background: none;
+							border: none;
+							color: #ffa185;
+							font-size: 1.2rem;
+							cursor: pointer;
+							padding: 0.5rem;
+							line-height: 1;
+						}
+					}
+				}
+
+				&.availability {
+					display: flex;
+					align-items: flex-start;
+					gap: 5rem;
+
+					.availability-input-container {
+						flex: 1;
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+
+						.availability-day-wrapper {
+							display: flex;
+							flex-direction: column;
+							gap: 0.5rem;
+
+							.availability-day-header {
+								display: flex;
+								align-items: center;
+								gap: 0.5rem;
+
+								.availability-checkbox {
+									width: 20px;
+									height: 20px;
+									cursor: pointer;
+									margin: 0;
+								}
+
+								.availability-day {
+									width: 100px;
+									font-size: 1rem;
+									color: #000103;
+									font-weight: 600;
+									text-align: left;
+								}
+							}
+
+							.availability-time-slots {
+								margin-left: 140px;
+								display: flex;
+								flex-direction: column;
+								gap: 0.5rem;
+
+								.availability-row {
+									display: flex;
+									align-items: center;
+									gap: 0.5rem;
+									width: 100%;
+
+									.time-input {
+										width: 120px;
+										padding: 0.5rem;
+										font-size: 0.9rem;
+
+										&:disabled {
+											background-color: #e0e0e0;
+											border-color: #ccc;
+										}
+									}
+
+									.time-separator {
+										font-size: 1rem;
+										color: #000103;
+										width: 20px;
+										text-align: center;
+									}
+
+									.remove-time-slot-btn {
+										background: none;
+										border: none;
+										color: #ff4d4d;
+										font-size: 1rem;
+										cursor: pointer;
+										padding: 0.5rem;
+										line-height: 1;
+									}
+								}
+
+								.add-time-slot-btn {
+									background: none;
+									border: none;
+									color: #ffa185;
+									font-size: 1.2rem;
+									cursor: pointer;
+									padding: 0.5rem;
+									line-height: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.form-btn {
+				margin: 5rem auto 2rem;
+			}
+		}
+	}
+
+	@media (max-width: 1080px) {
+		padding: 1.5rem;
+		max-width: 700px;
+		min-height: 650px;
+		margin: 8rem auto;
+
+		.userProfileForm-content {
+			padding: 0 0.75rem;
+
+			.userProfileForm-title {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.userProfileForm-subtitle {
+				font-size: 0.85rem;
+			}
+		}
+
+		.userProfileForm-inputs {
+			max-width: 100%;
+
+			form {
+				.userProfileForm-field {
+					label {
+						width: 100px;
+						font-size: 0.95rem;
+					}
+
+					.courses-label,
+					.availability-label {
+						width: 100px;
+						font-size: 0.95rem;
+					}
+
+					.userProfileForm-input,
+					.time-input {
+						padding: 0.7rem 0.9rem;
+						font-size: 0.95rem;
+					}
+
+					&.availability {
+						.availability-input-container {
+							.availability-day-wrapper {
+								.availability-day-header {
+									.availability-day {
+										width: 80px;
+										font-size: 0.95rem;
+									}
+								}
+
+								.availability-time-slots {
+									margin-left: 120px;
+
+									.availability-row {
+										.time-input {
+											width: 100px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		max-width: 100%;
+		min-height: auto;
+		padding: 1.5rem;
+		margin: 6rem 1rem;
+
+		.userProfileForm-content {
+			padding: 0;
+			margin-bottom: 1.5rem;
+
+			.userProfileForm-title {
+				font-size: 2rem;
+			}
+
+			.userProfileForm-subtitle {
+				font-size: 0.8rem;
+			}
+		}
+
+		.userProfileForm-inputs {
+			max-width: 100%;
+			align-items: center;
+
+			form {
+				align-items: center;
+
+				.userProfileForm-field {
+					flex-direction: column;
+					align-items: flex-start;
+					width: 90%;
+					margin: 0 auto;
+
+					label {
+						width: 100%;
+					}
+
+					.courses-label,
+					.availability-label {
+						width: 100%;
+					}
+
+					.userProfileForm-input {
+						width: 100%;
+					}
+
+					&.courses-taking,
+					&.courses-taken {
+						.courses-input-container {
+							width: 100%;
+
+							.course-input-wrapper {
+								width: 100%;
+
+								.course-input {
+									width: 100%;
+								}
+							}
+						}
+					}
+
+					&.availability {
+						.availability-input-container {
+							.availability-day-wrapper {
+								width: 100%;
+
+								.availability-day-header {
+									.availability-day {
+										width: 100%;
+									}
+								}
+
+								.availability-time-slots {
+									margin-left: 0;
+									width: 100%;
+
+									.availability-row {
+										flex-wrap: wrap;
+										gap: 0.5rem;
+
+										.time-input {
+											width: 48%;
+										}
+
+										.time-separator {
+											width: 20px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.form-btn {
+					margin: 2rem auto 1rem;
+					width: 90%;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 480px) {
+		padding: 1rem;
+		max-width: 95%;
+		margin: 4rem 1rem;
+
+		.userProfileForm-content {
+			.userProfileForm-title {
+				font-size: 1.8rem;
+				margin-bottom: 0.8rem;
+			}
+
+			.userProfileForm-subtitle {
+				font-size: 0.75rem;
+			}
+		}
+
+		.userProfileForm-inputs {
+			gap: 0.75rem;
+
+			form {
+				.userProfileForm-field {
+					width: 95%;
+
+					label {
+						font-size: 0.9rem;
+					}
+
+					.userProfileForm-input,
+					.time-input {
+						padding: 0.6rem 0.8rem;
+						font-size: 0.9rem;
+					}
+
+					&.availability {
+						.availability-input-container {
+							.availability-day-wrapper {
+								.availability-day-header {
+									.availability-day {
+										font-size: 0.9rem;
+									}
+								}
+
+								.availability-time-slots {
+									.availability-row {
+										.time-input {
+											width: 47%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.form-btn {
+					width: 95%;
+				}
+			}
+		}
+	}
+}
