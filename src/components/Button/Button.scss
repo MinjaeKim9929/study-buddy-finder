@@ -48,22 +48,47 @@
 	text-align: center;
 }
 
+// Form Button
+.form-btn {
+	background-color: #ffa185;
+	color: #f7edf0;
+	min-width: 120px;
+	padding: 12px 24px;
+	border-radius: 10px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	text-align: center;
+	width: 81%;
+
+	&:hover {
+		background-color: #ff9270;
+	}
+}
+
 // Responsive adjustments
 @media screen and (max-width: 768px) {
 	.navbar-primary-btn,
 	.navbar-secondary-btn,
-	.cta-btn {
+	.cta-btn,
+	.form-btn {
 		min-width: 80px;
 		padding: 10px 20px;
 		font-size: 0.875rem;
 		border-radius: 40px;
+	}
+
+	.form-btn {
+		width: 100%;
+		max-width: 315px;
+		border-radius: 10px;
 	}
 }
 
 @media screen and (max-width: 480px) {
 	.navbar-primary-btn,
 	.navbar-secondary-btn,
-	.cta-btn {
+	.cta-btn,
+	.form-btn {
 		min-width: 70px;
 		padding: 8px 16px;
 		font-size: 0.75rem;
