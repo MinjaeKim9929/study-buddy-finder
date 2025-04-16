@@ -65,6 +65,25 @@
 	}
 }
 
+@media screen and (max-width: 1080px) {
+	navbar-primary-btn,
+	.navbar-secondary-btn,
+	.cta-btn,
+	.form-btn {
+		min-width: 90px;
+		padding: 11px 22px;
+		font-size: 0.95rem;
+		border-radius: 45px;
+	}
+
+	.form-btn {
+		width: 81%;
+		max-width: 240.975px;
+		border-radius: 10px;
+		font-size: 0.95rem;
+	}
+}
+
 // Responsive adjustments
 @media screen and (max-width: 768px) {
 	.navbar-primary-btn,
@@ -79,8 +98,9 @@
 
 	.form-btn {
 		width: 100%;
-		max-width: 315px;
+		max-width: 90%;
 		border-radius: 10px;
+		margin: 0 auto;
 	}
 }
 
@@ -93,5 +113,10 @@
 		padding: 8px 16px;
 		font-size: 0.75rem;
 		border-radius: 30px;
+	}
+
+	.form-btn {
+		max-width: 95%;
+		border-radius: 10px;
 	}
 }

@@ -50,7 +50,6 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
 		align-items: flex-start;
 		max-width: 50%;
 
@@ -73,6 +72,7 @@
 					background-color: #f5f7fa;
 					outline: none;
 					transition: border-color 0.3s ease;
+					margin-bottom: 10px;
 
 					&:focus {
 						border-color: #ffa185;
@@ -108,12 +108,18 @@
 		.loginForm-inputs {
 			max-width: 45%;
 
-			label {
-				width: 85%;
+			form {
+				label {
+					width: 85%;
 
-				.loginForm-input {
-					padding: 0.7rem 0.9rem;
-					font-size: 0.95rem;
+					.loginForm-input {
+						padding: 0.7rem 0.9rem;
+						font-size: 0.95rem;
+					}
+				}
+
+				.form-btn {
+					min-width: 86%;
 				}
 			}
 		}
@@ -145,11 +151,22 @@
 			max-width: 100%;
 			align-items: center;
 
-			label {
-				width: 90%;
+			form {
+				align-items: center;
 
-				.loginForm-input {
+				label {
 					width: 100%;
+					margin: 0 auto;
+
+					.loginForm-input {
+						min-width: 95%;
+						margin-bottom: 10px;
+					}
+				}
+
+				.form-btn {
+					margin: 0 auto;
+					min-width: 100%;
 				}
 			}
 		}
@@ -173,13 +190,24 @@
 
 		.loginForm-inputs {
 			gap: 0.75rem;
+			width: 80%;
+			margin: 0 auto;
 
-			label {
-				width: 95%;
+			form {
+				label {
+					width: 95%;
 
-				.loginForm-input {
-					padding: 0.6rem 0.8rem;
-					font-size: 0.9rem;
+					.loginForm-input {
+						padding: 0.6rem 0.8rem;
+						font-size: 0.9rem;
+						margin-bottom: 0.3rem;
+					}
+				}
+
+				.form-btn {
+					width: 100%;
+					min-width: 100%;
+					margin-left: 15px;
 				}
 			}
 		}
