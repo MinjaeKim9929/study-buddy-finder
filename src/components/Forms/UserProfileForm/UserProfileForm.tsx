@@ -357,7 +357,7 @@ function UserProfileForm({ onSubmit }: UserProfileFormProps) {
 										value={course}
 										onChange={(e) => handleCourseChange(index, e.target.value, 'taking')}
 										className="userProfileForm-input course-input"
-										placeholder={`Course ${index + 1}`}
+										placeholder={`Course ${index + 1} (ABCD-1234)`}
 									/>
 									{coursesTaking.length > 1 && (
 										<button
@@ -391,7 +391,7 @@ function UserProfileForm({ onSubmit }: UserProfileFormProps) {
 										value={course}
 										onChange={(e) => handleCourseChange(index, e.target.value, 'taken')}
 										className="userProfileForm-input course-input"
-										placeholder={`Course ${index + 1}`}
+										placeholder={`Course ${index + 1} (ABCD-1234)`}
 									/>
 									{coursesTaken.length > 1 && (
 										<button
