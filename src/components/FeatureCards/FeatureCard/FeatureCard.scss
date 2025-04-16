@@ -1,0 +1,58 @@
+.featureCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 1.5rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	height: 100%;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+	}
+
+	.featureCard-image {
+		width: 250px;
+		height: 250px;
+		margin-bottom: 1rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	.featureCard-text {
+		text-align: center;
+		flex: 1;
+		font-family: 'Pretendard';
+
+		.featureCard-title {
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: #f7edf0;
+			margin-bottom: 0.5rem;
+		}
+
+		.featureCard-description {
+			font-size: 1rem;
+			color: #f7edf0;
+			line-height: 1.5;
+		}
+	}
+}
+
+.primary-feature-card {
+	background-color: #ffb199;
+}
+
+.secondary-feature-card {
+	background-color: #ffa185;
+}
+
+.tertiary-feature-card {
+	background-color: #ff9270;
+}
