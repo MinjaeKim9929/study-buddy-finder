@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 function RegisterForm() {
 	return (
 		<div className="registerForm">
+			<div className="registerForm-content">
+				<h1 className="registerForm-title">Sign Up</h1>
+				<p className="registerForm-signin">
+					Already have an account?
+					<Link to="/sign-in" aria-label="Sign in to your Study Buddy Finder account">
+						Sign in
+					</Link>
+				</p>
+			</div>
 			<div className="registerForm-inputs">
 				<form>
 					<label htmlFor="email">
@@ -30,15 +39,6 @@ function RegisterForm() {
 						Sign Up
 					</Button>
 				</form>
-			</div>
-			<div className="registerForm-content">
-				<h1 className="registerForm-title">Sign Up</h1>
-				<p className="registerForm-signin">
-					Already have an account?
-					<Link to="sign-in" aria-label="Sign in to your Study Buddy Finder account">
-						Sign in
-					</Link>
-				</p>
 			</div>
 		</div>
 	);
