@@ -56,6 +56,13 @@
 		form {
 			width: 100%;
 
+			.loginForm-error {
+				font-family: 'Pretendard';
+				color: #ffa185;
+				font-size: 0.9rem;
+				font-weight: 700;
+			}
+
 			label {
 				display: block;
 				width: 80%;
