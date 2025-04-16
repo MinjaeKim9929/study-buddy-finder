@@ -49,7 +49,7 @@ function Header() {
 									className={`navbar-secondary-btn ${isDropdownOpen ? 'active' : ''}`}
 									onClick={() => setIsDropdownOpen(!isDropdownOpen)}
 								>
-									<span>Profile</span>
+									<span>Menu</span>
 									<svg
 										className={`dropdown-arrow ${isDropdownOpen ? 'open' : ''}`}
 										width="12"
@@ -69,23 +69,18 @@ function Header() {
 								</Button>
 								{isDropdownOpen && (
 									<div className="dropdown-menu">
+										<Link to="/dashboard" onClick={() => setIsDropdownOpen(false)}>
+											<div className="dropdown-item">Dashboard</div>
+										</Link>
 										<Link to="/profile" onClick={() => setIsDropdownOpen(false)}>
 											<div className="dropdown-item">My Profile</div>
 										</Link>
 										<Link to="/create-group" onClick={() => setIsDropdownOpen(false)}>
 											<div className="dropdown-item">Create Group</div>
 										</Link>
-										<Link to="/groups" onClick={() => setIsDropdownOpen(false)}>
-											<div className="dropdown-item">View Groups</div>
-										</Link>
 									</div>
 								)}
 							</div>
-							<Link to="/dashboard">
-								<Button type="button" className="navbar-secondary-btn">
-									Dashboard
-								</Button>
-							</Link>
 							<Button type="button" className="navbar-primary-btn" onClick={handleLogout}>
 								Log Out
 							</Button>
