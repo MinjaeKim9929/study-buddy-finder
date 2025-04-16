@@ -6,24 +6,23 @@ import Button from '../../Button/Button';
 function LoginForm() {
 	return (
 		<div className="loginForm">
-			<div>
+			<div className="loginForm-content">
 				<h1 className="loginForm-title">Sign In</h1>
-				<p>Connect with peers in your courses, form study groups, and make learning collaborative and fun.</p>
-				<p>
+				<p className="loginForm-signup">
 					Don't have an account?
 					<Link to="/sign-up" aria-label="Sign up new Study Buddy Finder account">
 						Sign up
 					</Link>
 				</p>
 			</div>
-			<div>
+			<div className="loginForm-inputs">
 				<label htmlFor="email">
-					<input type="email" id="email" required placeholder="Email" />
+					<input type="email" id="email" required placeholder="Email" className="loginForm-input" />
 				</label>
 				<label htmlFor="password">
-					<input type="password" id="password" required placeholder="Password" />
+					<input type="password" id="password" required placeholder="Password" className="loginForm-input" />
 				</label>
-				<Button>Sign In</Button>
+				<Button className="form-btn">Sign In</Button>
 			</div>
 		</div>
 	);
