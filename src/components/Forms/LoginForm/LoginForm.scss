@@ -54,30 +54,34 @@
 		align-items: flex-start;
 		max-width: 50%;
 
-		label {
-			display: block;
-			width: 80%;
-			font-size: 1rem;
-			color: #000103;
-			margin-bottom: 0.25rem;
+		form {
+			width: 100%;
 
-			.loginForm-input {
-				width: 90%;
-				padding: 0.8rem 1rem;
+			label {
+				display: block;
+				width: 80%;
 				font-size: 1rem;
-				border: 2px solid #ddd;
-				border-radius: 10px;
-				background-color: #f5f7fa;
-				outline: none;
-				transition: border-color 0.3s ease;
+				color: #000103;
+				margin-bottom: 0.25rem;
 
-				&:focus {
-					border-color: #ffa185;
-				}
+				.loginForm-input {
+					width: 90%;
+					padding: 0.8rem 1rem;
+					font-size: 1rem;
+					border: 2px solid #ddd;
+					border-radius: 10px;
+					background-color: #f5f7fa;
+					outline: none;
+					transition: border-color 0.3s ease;
 
-				&::placeholder {
-					color: #999;
-					font-weight: 550;
+					&:focus {
+						border-color: #ffa185;
+					}
+
+					&::placeholder {
+						color: #999;
+						font-weight: 550;
+					}
 				}
 			}
 		}

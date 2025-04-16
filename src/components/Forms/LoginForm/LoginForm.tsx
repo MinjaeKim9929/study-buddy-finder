@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
 import './LoginForm.scss';
 import { Link } from 'react-router-dom';
 import Button from '../../Button/Button';
 
-function LoginForm() {
+interface LoginFormProps {
+	onSubmit: (email: string, password: string) => void;
+}
+
+function LoginForm({ onSubmit }: LoginFormProps) {
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+
+	const handleSubmit = (e: FormEvent) => {
+		e.preventDefault();
+		onSubmit(email, password);
+		setEmail('');
+		setPassword('');
+	};
+
 	return (
 		<div className="loginForm">
 			<div className="loginForm-content">
@@ -16,13 +30,33 @@ function LoginForm() {
 				</p>
 			</div>
 			<div className="loginForm-inputs">
-				<label htmlFor="email">
-					<input type="email" id="email" required placeholder="Email" className="loginForm-input" />
-				</label>
-				<label htmlFor="password">
-					<input type="password" id="password" required placeholder="Password" className="loginForm-input" />
-				</label>
-				<Button className="form-btn">Sign In</Button>
+				<form onSubmit={handleSubmit}>
+					<label htmlFor="email">
+						<input
+							type="email"
+							id="email"
+							required
+							placeholder="Email"
+							className="loginForm-input"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+					</label>
+					<label htmlFor="password">
+						<input
+							type="password"
+							id="password"
+							required
+							placeholder="Password"
+							className="loginForm-input"
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+						/>
+					</label>
+					<Button type="submit" className="form-btn">
+						Sign In
+					</Button>
+				</form>
 			</div>
 		</div>
 	);
