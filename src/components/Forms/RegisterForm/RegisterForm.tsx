@@ -1,5 +1,7 @@
 import React from 'react';
-import './Register.scss';
+import './RegisterForm.scss';
+import Button from '../../Button/Button';
+import { Link } from 'react-router-dom';
 
 function RegisterForm() {
 	return (
@@ -24,8 +26,22 @@ function RegisterForm() {
 							className="registerForm-input"
 						/>
 					</label>
+					<Button type="submit" className="form-btn ">
+						Sign Up
+					</Button>
 				</form>
+			</div>
+			<div className="registerForm-content">
+				<h1 className="registerForm-title">Sign Up</h1>
+				<p className="registerForm-signin">
+					Already have an account?
+					<Link to="sign-in" aria-label="Sign in to your Study Buddy Finder account">
+						Sign in
+					</Link>
+				</p>
 			</div>
 		</div>
 	);
 }
+
+export default RegisterForm;
