@@ -1,9 +1,11 @@
 import React from 'react';
+import HeroSection from '../../components/HeroSection/HeroSection';
+import './HomePage.scss';
 
 function HomePage() {
 	return (
-		<div>
-			<div>HomePage</div>
+		<div className="homepage">
+			<HeroSection />
 		</div>
 	);
 }

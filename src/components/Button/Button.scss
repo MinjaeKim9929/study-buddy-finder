@@ -36,10 +36,23 @@
 	}
 }
 
+// CTA button for Hero Section
+.cta-btn {
+	background-color: #ff9270;
+	color: #000103;
+	min-width: 120px;
+	padding: 12px 24px;
+	border-radius: 50px;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: center;
+}
+
 // Responsive adjustments
 @media screen and (max-width: 768px) {
 	.navbar-primary-btn,
-	.navbar-secondary-btn {
+	.navbar-secondary-btn,
+	.cta-btn {
 		min-width: 80px;
 		padding: 10px 20px;
 		font-size: 0.875rem;
@@ -49,7 +62,8 @@
 
 @media screen and (max-width: 480px) {
 	.navbar-primary-btn,
-	.navbar-secondary-btn {
+	.navbar-secondary-btn,
+	.cta-btn {
 		min-width: 70px;
 		padding: 8px 16px;
 		font-size: 0.75rem;
