@@ -3,7 +3,7 @@ import RegisterForm from '../../components/Forms/RegisterForm/RegisterForm';
 import UserProfileForm from '../../components/Forms/UserProfileForm/UserProfileForm';
 
 function SignUpPage() {
-	const handleProfileSubmit = (profile: {
+	const handleProfileSubmit = async (profile: {
 		firstName: string;
 		lastName: string;
 		age: number;
@@ -14,6 +14,15 @@ function SignUpPage() {
 		availability: Record<string, { selected: boolean; timeSlots: { startTime: string; endTime: string }[] }>;
 	}) => {
 		console.log(profile);
+	};
+
+	const handleRegistrationSubmit = async (formData: {
+		email: string;
+		confirmEmail: string;
+		password: string;
+		confirmPassword: string;
+	}) => {
+		console.log(formData);
 	};
 
 	return (
