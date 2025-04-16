@@ -1,0 +1,30 @@
+.featureCards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5rem;
+	padding: 0 300px;
+	background-color: #f7edf0;
+	margin-bottom: 200px;
+
+	.featureCard1,
+	.featureCard2,
+	.featureCard3 {
+		height: 100%;
+	}
+
+	@media (max-width: 1080px) {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 2rem 1.5rem;
+	}
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		padding: 2rem 1rem;
+		gap: 4rem;
+	}
+
+	@media (max-width: 480px) {
+		padding: 1.5rem 0.5rem;
+		gap: 5rem;
+	}
+}
