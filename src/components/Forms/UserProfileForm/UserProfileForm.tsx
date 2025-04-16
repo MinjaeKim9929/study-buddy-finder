@@ -246,14 +246,40 @@ function UserProfileForm({ onSubmit }: UserProfileFormProps) {
 
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
+
+		// Validate required fields
+		if (!firstName || !lastName || !gender || !major) {
+			alert('Please fill in all required fields');
+			return;
+		}
+
+		// Validate age
+		if (age < 1 || age > 120) {
+			alert('Please enter a valid age');
+			return;
+		}
+
+		// Validate courses
+		const validCoursesTaking = coursesTaking.filter((course) => course.trim() !== '');
+		const validCoursesTaken = coursesTaken.filter((course) => course.trim() !== '');
+
+		// Validate availability
+		const hasAvailability = Object.values(availability).some(
+			(day) => day.selected && day.timeSlots.some((slot) => slot.startTime && slot.endTime)
+		);
+
+		if (!hasAvailability) {
+			alert('Please select at least one available time slot');
+			return;
+		}
 		onSubmit({
 			firstName,
 			lastName,
 			age,
 			gender,
 			major,
-			coursesTaking: coursesTaking.filter((course) => course.trim() !== ''),
-			coursesTaken: coursesTaken.filter((course) => course.trim() !== ''),
+			coursesTaking: validCoursesTaking,
+			coursesTaken: validCoursesTaken,
 			availability,
 		});
 	};
@@ -261,8 +287,10 @@ function UserProfileForm({ onSubmit }: UserProfileFormProps) {
 	return (
 		<div className="userProfileForm">
 			<div className="userProfileForm-content">
-				<h1 className="userProfileForm-title">Set Up Your Profile</h1>
-				<p className="userProfileForm-subtitle">Tell us a bit about yourself to get started.</p>
+				<h1 className="userProfileForm-title">Complete Your Profile</h1>
+				<p className="userProfileForm-description">
+					Tell us more about yourself to help us find the perfect study buddies for you.
+				</p>
 			</div>
 			<div className="userProfileForm-inputs">
 				<form onSubmit={handleSubmit}>

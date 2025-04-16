@@ -1,18 +1,21 @@
 import React, { useState, FormEvent } from 'react';
 import './RegisterForm.scss';
 import Button from '../../Button/Button';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { auth } from '../../../config/firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-function RegisterForm() {
+interface RegisterFormProps {
+	onSubmit: (formData: { email: string; confirmEmail: string; password: string; confirmPassword: string }) => void;
+}
+
+function RegisterForm({ onSubmit }: RegisterFormProps) {
 	const [email, setEmail] = useState('');
 	const [confirmEmail, setConfirmEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [errorMsg, setErrorMsg] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
-	const navigate = useNavigate();
 
 	const validateForm = () => {
 		if (!email || !confirmEmail || !password || !confirmPassword) {
@@ -50,7 +53,7 @@ function RegisterForm() {
 		try {
 			const credential = await createUserWithEmailAndPassword(auth, email, password);
 			const user = credential.user;
-			navigate('/profile');
+			onSubmit({ email, confirmEmail, password, confirmPassword });
 		} catch (err: any) {
 			let errorMessage = 'An error occurred during registration';
 			if (err.code === 'auth/email-already-in-use') {
