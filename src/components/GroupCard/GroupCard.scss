@@ -1,0 +1,92 @@
+.group-card {
+	background-color: #fff;
+	border: 2px solid #ffa185;
+	border-radius: 20px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	transition: transform 0.2s ease;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	max-width: 300px;
+	text-align: center;
+
+	&:hover {
+		transform: translateY(-3px);
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #000103;
+		margin-bottom: 0.25rem;
+	}
+
+	p {
+		font-size: 1rem;
+		color: #333;
+		margin-bottom: 0.25rem;
+	}
+
+	.group-courses {
+		font-size: 0.95rem;
+		color: #555;
+		font-weight: 600;
+	}
+
+	.group-link {
+		align-self: center;
+		margin-top: 0.5rem;
+		color: #fff;
+		background-color: #ffa185;
+		padding: 0.5rem 1rem;
+		border-radius: 10px;
+		font-weight: bold;
+		text-decoration: none;
+		transition: background-color 0.2s ease;
+
+		&:hover {
+			background-color: #ff9270;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.group-card {
+		padding: 1.2rem;
+
+		h3 {
+			font-size: 1.25rem;
+		}
+
+		p,
+		.group-courses {
+			font-size: 0.9rem;
+		}
+
+		.group-link {
+			padding: 0.45rem 0.9rem;
+			font-size: 0.9rem;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.group-card {
+		padding: 1rem;
+
+		h3 {
+			font-size: 1.1rem;
+		}
+
+		p,
+		.group-courses {
+			font-size: 0.85rem;
+		}
+
+		.group-link {
+			font-size: 0.85rem;
+		}
+	}
+}

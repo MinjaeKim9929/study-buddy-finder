@@ -1,0 +1,88 @@
+.filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	align-items: flex-end;
+	justify-content: center;
+	margin: 2rem 0;
+
+	.filter-field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+
+		label {
+			font-weight: 600;
+			font-size: 1rem;
+			color: #000103;
+		}
+
+		select,
+		input {
+			padding: 0.6rem 0.8rem;
+			border: 2px solid #ddd;
+			border-radius: 10px;
+			font-size: 1rem;
+			background-color: #f5f7fa;
+
+			&:focus {
+				border-color: #ffa185;
+				outline: none;
+			}
+		}
+	}
+
+	.filter-actions {
+		display: flex;
+		gap: 1rem;
+
+		.filter-btn {
+			background-color: #ffa185;
+			color: #fff;
+			padding: 0.6rem 1.2rem;
+			border-radius: 10px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: background-color 0.2s ease;
+
+			&:hover {
+				background-color: #ff9270;
+			}
+
+			&.reset {
+				background-color: #ccc;
+				color: #333;
+
+				&:hover {
+					background-color: #bbb;
+				}
+			}
+		}
+	}
+}
+
+// Responsive
+@media screen and (max-width: 768px) {
+	.filter-bar {
+		flex-direction: column;
+		align-items: stretch;
+		.filter-actions {
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.filter-bar {
+		.filter-field {
+			select,
+			input {
+				font-size: 0.9rem;
+			}
+		}
+		.filter-actions .filter-btn {
+			font-size: 0.9rem;
+			padding: 0.5rem 1rem;
+		}
+	}
+}
