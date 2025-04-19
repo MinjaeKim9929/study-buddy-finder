@@ -1,0 +1,110 @@
+.dashboard-page {
+	padding: 2rem;
+	background-color: #f9f9f9;
+	min-height: 100vh;
+
+	.dashboard-main {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: #000103;
+			text-align: center;
+			margin-bottom: 1rem;
+		}
+
+		section {
+			background-color: #fff;
+			border-radius: 20px;
+			padding: 2rem;
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+			h2 {
+				font-size: 1.8rem;
+				color: #000103;
+				font-weight: 600;
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		.involved-section {
+			border-left: 6px solid #50e2c2;
+		}
+
+		.available-section {
+			border-left: 6px solid #ffa185;
+		}
+
+		.filter-section {
+			background-color: #f5f7fa;
+			border: 2px dashed #ccc;
+		}
+	}
+}
+
+// Responsive Design
+
+@media screen and (max-width: 1080px) {
+	.dashboard-page {
+		padding: 1.5rem;
+
+		.dashboard-main {
+			gap: 2.5rem;
+
+			h1 {
+				font-size: 2.2rem;
+			}
+
+			section {
+				padding: 1.75rem;
+
+				h2 {
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.dashboard-page {
+		padding: 1rem;
+
+		.dashboard-main {
+			h1 {
+				font-size: 2rem;
+			}
+
+			section {
+				padding: 1.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.dashboard-page {
+		padding: 0.75rem;
+
+		.dashboard-main {
+			gap: 2rem;
+
+			h1 {
+				font-size: 1.75rem;
+			}
+
+			section {
+				padding: 1rem;
+
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}

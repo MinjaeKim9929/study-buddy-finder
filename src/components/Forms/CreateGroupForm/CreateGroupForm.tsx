@@ -62,6 +62,7 @@ function CreateGroupForm({ onSubmit }: CreateGroupFormProps) {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
+
 		onSubmit({
 			groupName,
 			programs,
@@ -70,6 +71,22 @@ function CreateGroupForm({ onSubmit }: CreateGroupFormProps) {
 			maxMembers,
 			location,
 			time: availability,
+		});
+
+		setGroupName('');
+		setPrograms(['']);
+		setCourses(['']);
+		setDescription('');
+		setMaxMembers(2);
+		setLocation('');
+		setAvailability({
+			Sunday: { selected: false, timeSlots: [{ startTime: '', endTime: '' }] },
+			Monday: { selected: false, timeSlots: [{ startTime: '', endTime: '' }] },
+			Tuesday: { selected: false, timeSlots: [{ startTime: '', endTime: '' }] },
+			Wednesday: { selected: false, timeSlots: [{ startTime: '', endTime: '' }] },
+			Thursday: { selected: false, timeSlots: [{ startTime: '', endTime: '' }] },
+			Friday: { selected: false, timeSlots: [{ startTime: '', endTime: '' }] },
+			Saturday: { selected: false, timeSlots: [{ startTime: '', endTime: '' }] },
 		});
 	};
 
