@@ -1,0 +1,178 @@
+.createGroupForm {
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+	padding: 2rem;
+	max-width: 800px;
+	margin: 10rem auto;
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		color: #000103;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.createGroupForm-inputs {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		align-items: center;
+		margin-left: 2rem;
+		margin-right: 2rem;
+
+		form {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
+			label {
+				font-weight: 600;
+				color: #000103;
+				position: relative;
+
+				&.required::after {
+					content: '*';
+					color: #ff4d4d;
+					margin-left: 0.25rem;
+					position: absolute;
+					top: 0;
+				}
+			}
+
+			input,
+			select {
+				padding: 0.8rem 1rem;
+				font-size: 1rem;
+				border: 2px solid #ddd;
+				border-radius: 10px;
+				background-color: #f5f7fa;
+				font-family: 'Pretendard';
+
+				&:focus {
+					border-color: #ffa185;
+				}
+			}
+
+			.courses-input-container {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+
+				.course-input-wrapper {
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+
+					input {
+						flex: 1;
+					}
+				}
+			}
+
+			.availability-day {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+
+				> label {
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+					font-weight: 600;
+					color: #000103;
+				}
+
+				.time-slots {
+					margin-left: 1.5rem;
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+
+					.time-slot {
+						display: flex;
+						align-items: center;
+						gap: 0.5rem;
+
+						input[type='time'] {
+							padding: 0.5rem;
+							font-size: 0.9rem;
+							border-radius: 8px;
+							border: 2px solid #ddd;
+							background-color: #f5f7fa;
+
+							&:focus {
+								border-color: #ffa185;
+							}
+						}
+					}
+				}
+			}
+
+			.createGroupForm-button {
+				margin: 3rem auto 1rem;
+				width: fit-content;
+			}
+		}
+	}
+
+	@media (max-width: 1080px) {
+		padding: 1.5rem;
+		max-width: 700px;
+		margin: 8rem auto;
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		.createGroupForm-inputs {
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 1.5rem;
+		max-width: 100%;
+		margin: 6rem 1rem;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.createGroupForm-inputs {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	@media (max-width: 480px) {
+		padding: 1rem;
+		margin: 4rem 1rem;
+
+		h1 {
+			font-size: 1.8rem;
+		}
+
+		.createGroupForm-inputs form {
+			label {
+				font-size: 0.9rem;
+			}
+
+			input,
+			select {
+				font-size: 0.9rem;
+				padding: 0.6rem 0.9rem;
+			}
+
+			.availability-day .time-slots .time-slot {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+	}
+}
