@@ -1,0 +1,161 @@
+.group-details {
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+	padding: 2rem;
+	max-width: 800px;
+	margin: 10rem auto;
+	font-family: 'Pretendard';
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		color: #000103;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	p {
+		font-size: 1rem;
+		color: #000103;
+		font-weight: 600;
+		margin: 0.5rem 0;
+		text-align: left;
+		width: 100%;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+
+		strong {
+			color: #000103;
+			font-weight: 700;
+			margin-right: 0.5rem;
+		}
+
+		span {
+			margin-right: 0.25rem;
+		}
+	}
+
+	.join-btn,
+	.quit-btn {
+		margin: 2rem auto 0;
+		background-color: #ffa185;
+		color: #fff;
+		border: none;
+		padding: 0.8rem 1.5rem;
+		border-radius: 10px;
+		font-size: 1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		font-family: 'Pretendard';
+		display: block;
+
+		&:hover {
+			background-color: #ff8c61;
+		}
+
+		&:disabled {
+			background-color: #ccc;
+			cursor: not-allowed;
+		}
+	}
+
+	@media (max-width: 1080px) {
+		padding: 1.5rem;
+		max-width: 700px;
+		margin: 8rem auto;
+
+		h1 {
+			font-size: 2.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		p {
+			font-size: 0.95rem;
+			max-width: 100%;
+		}
+
+		.join-btn {
+			padding: 0.7rem 1.3rem;
+			font-size: 0.95rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		max-width: 100%;
+		min-height: auto;
+		padding: 1.5rem;
+		margin: 6rem 1rem;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+			text-align: center;
+		}
+
+		.join-btn {
+			margin: 1.5rem auto 0;
+			width: 90%;
+		}
+	}
+
+	@media (max-width: 480px) {
+		padding: 1rem;
+		max-width: 95%;
+		margin: 4rem 1rem;
+
+		h1 {
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			font-size: 0.85rem;
+		}
+
+		.join-btn {
+			width: 95%;
+			padding: 0.6rem 1.2rem;
+			font-size: 0.9rem;
+		}
+	}
+}
+
+.loading,
+.not-found {
+	text-align: center;
+	font-size: 1rem;
+	color: #000103;
+	font-weight: 600;
+	font-family: 'Pretendard';
+	margin: 10rem auto;
+	max-width: 800px;
+	padding: 2rem;
+
+	@media (max-width: 1080px) {
+		margin: 8rem auto;
+		padding: 1.5rem;
+		font-size: 0.95rem;
+	}
+
+	@media (max-width: 768px) {
+		margin: 6rem 1rem;
+		padding: 1.5rem;
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 480px) {
+		margin: 4rem 1rem;
+		padding: 1rem;
+		font-size: 0.85rem;
+	}
+}
