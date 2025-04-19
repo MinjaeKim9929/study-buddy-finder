@@ -6,7 +6,7 @@ import HomePage from './pages/Home/HomePage';
 import DashboardPage from './pages/Dashboard/DashboardPage';
 import SignInPage from './pages/Signin/SignInPage';
 import SignUpPage from './pages/Signup/SignUpPage';
-import ProfilePage from './pages/Profile/Profile';
+import ProfilePage from './pages/Profile/ProfilePage';
 import CreateGroupPage from './pages/CreateGroup/CreateGroupPage';
 import GroupDetailsPage from './pages/GroupDetails/GroupDetailsPage';
 import NotFoundPage from './pages/NotFound/NotFoundPage';

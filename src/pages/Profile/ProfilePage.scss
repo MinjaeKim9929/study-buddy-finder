@@ -1,0 +1,135 @@
+.profile-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff;
+	border-radius: 30px;
+	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+	padding: 2rem;
+	max-width: 900px;
+	margin: 8rem auto;
+	font-family: 'Pretendard';
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #000103;
+		margin-bottom: 2rem;
+	}
+
+	.profile-content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.profile-field {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+
+			&.required::after {
+				content: '*';
+				color: #ff4d4d;
+				margin-left: 0.25rem;
+			}
+		}
+
+		input[type='text'],
+		input[type='time'] {
+			padding: 0.8rem 1rem;
+			font-size: 1rem;
+			border: 2px solid #ddd;
+			border-radius: 10px;
+			background-color: #f5f7fa;
+			outline: none;
+			transition: border-color 0.3s ease;
+
+			&:focus {
+				border-color: #ffa185;
+			}
+		}
+	}
+
+	.course-entry {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.availability-day {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+
+		label {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-weight: 600;
+		}
+
+		.time-slots {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			margin-left: 1.5rem;
+		}
+
+		.time-slot {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+	}
+
+	.add-btn,
+	.remove-btn,
+	.action-btn {
+		background-color: #ffa185;
+		color: white;
+		border: none;
+		border-radius: 8px;
+		padding: 0.6rem 1rem;
+		cursor: pointer;
+		font-weight: bold;
+
+		&:hover {
+			background-color: #e08d73;
+		}
+	}
+
+	.loading,
+	.no-profile {
+		text-align: center;
+		font-size: 1.2rem;
+		color: #333;
+	}
+
+	@media (max-width: 768px) {
+		padding: 1rem;
+		margin: 6rem 1rem;
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		.profile-field {
+			input[type='text'],
+			input[type='time'] {
+				font-size: 0.95rem;
+				padding: 0.7rem 0.9rem;
+			}
+		}
+
+		.time-slot {
+			flex-wrap: wrap;
+		}
+	}
+}
